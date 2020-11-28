@@ -4,7 +4,85 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome 22</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="grid-x grid-margin-x">
+    <div class="cell small-12">
+        <p></p>
+        <h4>Найденные сертификаты</h4>
+        <table class="stack">
+            <thead>
+            <tr>
+                <th>Сертификат</th>
+                <th>Начало действия</th>
+                <th>Окончание действия</th>
+            </tr>
+            </thead>
+            <tbody id="firstTable"></tbody>
+        </table>
+        <p></p>
+    </div>
+    <div class="cell small-6">
+        <div class="card">
+            <div class="card-divider">
+                <h4>Подписание документов</h4>
+            </div>
+            <div class="card-section">
+                
+                <label class="button">Загрузить документы для подписи
+                    <input type="file" id="uploadFile" multiple onchange="fileLoaded(event)" class="show-for-sr">
+                </label>
+
+                <a class="button primary" onclick="signFiles(); return false;" href="#">Подписать документы</a>
+
+                <table class="stack">
+                    <thead>
+                    <tr>
+                        <th>Файл</th>
+                        <th>Тип</th>
+                    </tr>
+                    </thead>
+                    <tbody id="secondTable">
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <div class="cell small-6">
+        <div class="card">
+            <div class="card-divider">
+                <h4>Верификация документов</h4>
+            </div>
+            <div class="card-section">
+
+                <label for="exampleFileUpload" class="button">Загрузить документы для верификации</label>
+                <input type="file" id="exampleFileUpload" class="show-for-sr">
+
+                <a class="button primary" href="#">Верификацировать документы</a>
+
+                <table class="stack">
+                    <thead>
+                    <tr>
+                        <th>Table Header</th>
+                        <th>Table Header</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Content Goes Here</td>
+                        <td>Content Goes Here</td>
+                    </tr>
+                    <tr>
+                        <td>Content Goes Here</td>
+                        <td>Content Goes Here</td>
+                    </tr>
+                    <tr>
+                        <td>Content Goes Here</td>
+                        <td>Content Goes Here</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
 </div>
